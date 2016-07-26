@@ -38,7 +38,7 @@ module.exports = function pdfTextExtract(filePath, options, cb) {
   if (options.layout === 'layout')    args.push('-layout')
   if (options.layout === 'raw')       args.push('-raw')
   if (options.layout === 'htmlmeta')  args.push('-htmlmeta')
-
+  if (options.layout === 'table')  args.push('-table')
   // Output text encoding (UCS-2, ASCII7, Latin1, UTF-8, ZapfDingbats or Symbol)
   if (options.encoding) { args.push('-enc'); args.push(options.encoding) }
 
